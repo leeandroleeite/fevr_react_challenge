@@ -29,8 +29,11 @@ function App() {
 
   return (
     <>
-      <Map locations={locations} />
-      <Gallery users={users} />
+      <div style={{ margin: 10, display: "flex", flexDirection: "column" }}>
+        <Map locations={locations} />
+        <hr />
+        <Gallery users={users} />
+      </div>
     </>
   );
 }
