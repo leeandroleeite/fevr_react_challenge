@@ -41,7 +41,7 @@ const Map = (props: any) => {
   const mapStyles = {
     overflow: "hidden",
     width: "100%",
-    height: 600,
+    height: "70vh",
   };
 
   return <div id="map" style={mapStyles} />;

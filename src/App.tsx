@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     axios.get(BASE_URL).then((response) => setUsers(response.data));
     getLocations(users);
-  }, [users]);
+  }, []);
 
   var locations: any = [];
 
