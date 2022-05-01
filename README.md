@@ -1,6 +1,6 @@
 # Fevr React Challenge
 
-## Simple React App that consumes an API of some users and display theis basic info on cards, and their location on a Map.
+## Simple React App that shows users basic info on cards, and their location on a Map.
 
 ## Features:
 
