@@ -7,13 +7,12 @@ import Map from "./components/Map";
 function App() {
   const BASE_URL = "https://jsonplaceholder.typicode.com/users";
   const [users, setUsers] = useState(null);
+  var locations: any = [];
 
   useEffect(() => {
     axios.get(BASE_URL).then((response) => setUsers(response.data));
     getLocations(users);
-  }, []);
-
-  var locations: any = [];
+  }, [users]);
 
   function getLocations(users: any) {
     for (let i in users) {
@@ -22,10 +21,9 @@ function App() {
         parseFloat(users[i].address.geo.lng),
       ]);
     }
-    return locations;
   }
 
-  if (!users || !locations) return null;
+  if (!users) return null;
 
   return (
     <>
